@@ -1,0 +1,26 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+API key for com.ibm.research.gangawatch
+AIzaSyBRzFTtIS1ANaQMlw4G_gHbJjhCflxV_mg
+
+
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=E0:5A:EE:C3:E0:39:32:83:F4:20:43:84:7E:41:7E:85:38:D4:A3:29%3Bcom.example.admin.myganga
+
+    You can also add your credentials to an existing key, using this line:
+    E0:5A:EE:C3:E0:39:32:83:F4:20:43:84:7E:41:7E:85:38:D4:A3:29;com.example.admin.myganga
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+
+    latest: ganga watch key
+
+    -->
+    <string name="google_maps_key" translatable="false" templateMergeStrategy="preserve">
+        AIzaSyA0t9e0erzuiCTEk2q5HLN-tD6K2X--XaA
+    </string>
+</resources>

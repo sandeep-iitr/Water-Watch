@@ -1,0 +1,437 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.ibm.research.waterwatch.com.ibm.research.waterwatch.PlacesData2">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/lightblue"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            >
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+
+            android:text="My Ganga"
+            android:id="@+id/Place_name"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+
+                android:text="Month"
+                android:id="@+id/Month_selected"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                />
+
+         </LinearLayout>
+<ScrollView
+    android:layout_width="fill_parent"
+    android:layout_height="0dp"
+    android:layout_weight="5"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            >
+
+        <TableLayout
+            android:stretchColumns="0,1"
+            android:id="@+id/main_table"
+            android:layout_height="fill_parent"
+            android:layout_width="fill_parent">
+        </TableLayout>
+</ScrollView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#DAE5E8"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+            <TextView
+                android:layout_width="fill_parent"
+                android:textSize="20dp"
+                android:layout_height="40dp"
+
+                android:text="PH"
+                android:id="@+id/ph"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                />
+
+            <TextView
+                android:layout_width="fill_parent"
+
+                android:layout_height="20dp"
+                android:textSize="15dp"
+
+                android:text="PData"
+                android:id="@+id/phdata"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                />
+</LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#DAE5E8"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="20dp"
+                    android:text="TDS"
+                    android:id="@+id/tds"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+                    android:text="Tdata"
+                    android:id="@+id/tdsdata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#DAE5E8"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+
+                    android:textSize="20dp"
+                    android:layout_height="40dp"
+                    android:text="DO"
+                    android:id="@+id/DO"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+
+                    android:textSize="15dp"
+                    android:layout_height="20dp"
+
+                    android:text="DData"
+                    android:id="@+id/dodata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#DAE5E8"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="20dp"
+                    android:layout_height="40dp"
+
+                    android:text="Fecal Coliform"
+                    android:id="@+id/fecal_coliform"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+
+                    android:textSize="15dp"
+                    android:layout_height="20dp"
+
+                    android:text="FData"
+                    android:id="@+id/fecal_coliformdata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#DAE5E8"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+
+                    android:textSize="20dp"
+                    android:layout_height="40dp"
+                    android:text="Filtered BOD"
+                    android:id="@+id/filtered_bod"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+
+                    android:textSize="15dp"
+                    android:layout_height="20dp"
+
+                    android:text="BData"
+                    android:id="@+id/filtered_boddata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:background="#DAE5E8"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:textSize="20dp"
+                    android:layout_height="40dp"
+
+                    android:text="Filtered COD"
+                    android:id="@+id/filtered_cod"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+
+                    android:textSize="15dp"
+                    android:layout_height="20dp"
+
+                    android:text="CData"
+                    android:id="@+id/filtered_coddata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_margin="1dp"
+            android:gravity="center"
+            >
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#DAE5E8"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:textSize="20dp"
+                    android:layout_height="40dp"
+
+                    android:text="Capacity"
+                    android:id="@+id/capacity"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="fill_parent"
+
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+
+                    android:text="CData"
+                    android:id="@+id/capacitydata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#DAE5E8"
+                android:layout_margin="1dp"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:textSize="20dp"
+                    android:text="Flow"
+                    android:id="@+id/flow"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:textSize="15dp"
+                    android:text="Fdata"
+                    android:id="@+id/flowdata"
+                    android:layout_margin="1dp"
+                    android:gravity="center"
+                    />
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+        </ScrollView>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp">
+
+
+            <Button
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="Select Date"
+                android:id="@+id/select_date"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/lightblue"
+                />
+
+        <Button
+
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:background="@drawable/lightblue"
+            android:layout_height="wrap_content"
+            android:text="Go Back"
+            android:id="@+id/go_back"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
