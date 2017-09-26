@@ -53,7 +53,7 @@
             android:label="@string/title_activity_graph_vis" >
         </activity>
         <activity
-            android:name="com.research.waterwatch.PlacesData2"
+            android:name="com.research.waterwatch.PlacesData"
             android:label="@string/title_activity_places_data2"
             android:screenOrientation="portrait"
             >

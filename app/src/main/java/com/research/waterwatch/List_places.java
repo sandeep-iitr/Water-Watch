@@ -105,7 +105,7 @@ public class List_places extends Activity {
                     GlobalData.current_range=p.range;
 
 
-                    Intent intent = new Intent(getApplicationContext(), PlacesData2.class);
+                    Intent intent = new Intent(getApplicationContext(), PlacesData.class);
                     startActivity(intent);
 
                 }
@@ -234,7 +234,7 @@ public class List_places extends Activity {
                     GlobalData.current_marker = p.Place_name.toUpperCase();
                     GlobalData.current_range=p.range;
 
-                    Intent intent = new Intent(getApplicationContext(), PlacesData2.class);
+                    Intent intent = new Intent(getApplicationContext(), PlacesData.class);
                     startActivity(intent);
 
 

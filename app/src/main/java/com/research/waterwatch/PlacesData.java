@@ -33,7 +33,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import java.net.URL;
 import java.util.ArrayList;
 
-public class PlacesData2 extends ActionBarActivity {
+public class PlacesData extends ActionBarActivity {
     String nodata="No data";
     Context cnt;
     String[] Month_s = {"dummy","Jan", "Feb", "Mar", "Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"};
@@ -178,6 +178,10 @@ public class PlacesData2 extends ActionBarActivity {
         final float scale = getResources().getDisplayMetrics().density;
         int pixels_layout_Param_row = (int) (60 * scale + 0.5f);//multiple screens
         LinearLayout.LayoutParams Param_row = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, pixels_layout_Param_row);
+
+        int pixels_layout_Param_row_wqe = (int) (80 * scale + 1f);//multiple screens
+        LinearLayout.LayoutParams Param_row_wqe = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, pixels_layout_Param_row_wqe);
+
         int pixels_margin_Param_row = (int) (3 * scale + 0.5f);//multiple screens
         Param_row.setMargins(pixels_margin_Param_row,pixels_margin_Param_row,pixels_margin_Param_row,pixels_margin_Param_row);
         int pixels_text_size_Param_row = 20;//(int) (10 * scale + 0.5f);//multiple screens, size for the text data
@@ -1568,6 +1572,38 @@ public class PlacesData2 extends ActionBarActivity {
             stime.setTextColor(Color.WHITE);
             P_2.addView(stime);
 
+
+            /*
+            Adding Water Quality Index box in the data
+             */
+
+
+
+
+
+            int pixels_text_size_Param_wqe = 16;//(int) (10 * scale + 0.5f);//multiple screens, size for the text data
+            TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, pixels_text_size_Param_wqe, getResources().getDisplayMetrics());
+
+            TextView WQE = new TextView(cnt);
+            WQE.setLayoutParams(Param_row_wqe);
+            WQE.setTextSize(pixels_text_size_Param_wqe);
+            WQE.setText("Water Quality Index\n" + nodata);
+            WQE.setBackgroundColor(Color.parseColor("#ded8ec"));
+            WQE.setGravity(Gravity.CENTER);
+            P_3a.addView(WQE);
+
+            Double DO=-1.0;
+            //computing the value of WQE
+            if(!s.DO.isEmpty()&&!s.DO.equals("-1.0"))
+            {
+                //parameter is there
+                DO=Double.valueOf(s.DO);
+                Toast.makeText(cnt, "Do is:"+DO, Toast.LENGTH_SHORT).show();
+            }
+
+            /*
+            End adding Water Quality index box
+             */
 
 
          if(!s.DO.isEmpty())

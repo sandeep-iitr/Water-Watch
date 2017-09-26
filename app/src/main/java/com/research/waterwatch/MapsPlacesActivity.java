@@ -170,7 +170,7 @@ public class MapsPlacesActivity extends FragmentActivity {
 
 
 
-                Intent intent = new Intent(MapsPlacesActivity.this,PlacesData2.class);
+                Intent intent = new Intent(MapsPlacesActivity.this,PlacesData.class);
                 startActivity(intent);
                 return true;
             }
