@@ -19,5 +19,6 @@ Water watch uses BlueWater API to fetch water quality data. Water watch is new v
 
 <p align="center">
   <img src="screenshots/7.png" width="250"/>
+  <img src="screenshots/8.png" width="250"/>
 </p>
 
