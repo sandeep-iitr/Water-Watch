@@ -3,57 +3,246 @@
 
     <item
         is-multidex="true"
-        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/libs/mpandroidchartlibrary-2-1-5.jar"
+        jar="/Users/administrator/.android/build-cache/8f089337db6804ba45105a0db9ad22d4886b7d72/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="a7650f11d4eb03995f4450562cc271d5f790c992">
-        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/transforms/dex/debug/folders/1000/2/mpandroidchartlibrary-2-1-5_c671aede5fe8c311e769961623263ec49f700855/classes.dex" />
+        sha1="3988694bf9d8186ff97ad5cdfa4ed88b5010fe08">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_54820269f2f46f4eb74af89fa43ed077cf5545db/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5c2f73f3894136cf8944da4733e8149a666a664a">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_602a86f9d1532206ec32619a5984d930aef2f6cd/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/fec01c73dba4126d8b09b7e1fe73a0774c497198/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4f4fe3c23776540625f3c2844152a7510fddf9f1">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d6d42203397a35f46b64ec20d1d42fe6a45b8621/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/e41749bef38375bef44195c437957e2b473a59ea/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b48d5c51a9a9e329005106b4667f54948de4d4d8">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_365035556d68aaf310d20b4a5aecc3d21488b6cb/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/a172548fd4eb516799d1afe1590ddf3300c9c17f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0708ef60917bf94913fe9ef972a655b99462dca7">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3d9265344927f3df60dfddf7126ffbe11a6228c3/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/22.1.1/support-annotations-22.1.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="01d051a6bfb1218b1db2d3a5af0480ac2c25c42a">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-22.1.1_c47c8e08b9633aa9236da1672faf08546f9d9771/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/d3e0c735c2c37c7671442457cd65095bdae19ee1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="565a01f90f1529f73362707c4c185d0623a68782">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_2a1f7d6648e01d71cd47334f6cc1cd7f74a3bb5a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/579cd32d81dd61b370fefb928cc71cb71fc4cf0d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5ea948d825957be6c4358c48422bee60eef2d487">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_03a264dc71d469f11e38d2dc8c9c5487cb570a1c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/fe1bbc4fc990d0439d9632d5043cfac8c8a4886a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e35fae1b377c23aa5fd2d309a190c2d0f73d54ec">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b341a1bcc1344fc7e8f9ec673432f525251f9094/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/12f4cedd2f8743ab9aca1659b4fa13038c805cb3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0180d031a7b54dabb93b4af3869468b55dc938bd">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0040483fe42c7500ab456b0da00505cfa15c5928/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/f1accdbca4c63183024c046139cc9e0bd29031d8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a3ff3c506644c820eb2bdf06e8339f72be578551">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_377abda3d47bdd16486a34d3cdf489ff57aca223/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/4b16ef3da59a2dd143e0e279fbcabcf79abaee5c/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b2c07cdb814fe988ad05f7b4d767a841514a5991">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5cdff1138858b96e2e0f4fc3cbf60d358501bff1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/8452eff56a3acc67b8b8998fbf29a27ee7e64f88/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c9dea9e85aceb09d95df5e6f7bc8a43fc286068">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d7873af051b78df1a3ce50f91375c66b92a1977b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/ef5a38365adcbceab2593dad543ee90fccd079c4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6046e5cdaf799120b7c56a5a061d80e8854c4d34">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_899803fc632fef0085ba4fabd321c37212f476b1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/2e98aed829fef6ad024193c7eb0598a54dfeb95f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3b4ff5c39dace8f3b4ab4cab8191785547a0815f">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4c06d1a5e82bb11dfbfd983314c2d85e7d538849/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/42234b7ed12b1934141d1a75f0bdd894ecaad0a8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="fe3e0c6de7cceed888b277487238b6af9a1cc299">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e9fda9fd830a8945dbd21a15264ec1d631e6777d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/0cc236b7ba1de7e5b30082be8d8448fc0829d107/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5b9f5b0aa8dee788beb63d23832cb29ce771343">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_61136a5ed40023e6560c9515e2180d8f684d475f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/7082f80c86dd31b487d82d0a2f402016f24d3d48/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="59652857a825fff0de62166fca1bc9553cc01abb">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_10940124a7e32fff5e00b04272b6a1c1b4c8e3b7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/ce3932350c74994f8c0e41dff99847e152fda70d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a0ce76dfaccbfbd6c551ed2174280aaabe60fe47">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_805c56405896c29c4eb1ea6a8896c10922c9f844/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/b98d9bcb87e36d0f2123ba4c3296aae9d23c0982/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e5bf453b070c1e39297986144960e45afa0fdfad">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7a94622db0907896bc880b5e4f9da8108e3afeff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/af9bc5883fb54347fd6ee6b048bc0afdc4ace615/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7215ac1f2fca947b9415a6ee2a1bf991364aab24">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_8c45ef61d92cbb6cc65ab66ad2a8a12e83ef2971/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/fc1d3a7538f1235392715ffca980d1d426512c90/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c95ba8152923e4872e86a82cfcba9a51c0214328">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_39e2e62853c052adb1820810ed80fd97cee19932/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
         sha1="3be78ebc2706b2e1fe2f12d5726887a92d6c183b">
-        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_dd80169cdc2f2c053f71522b480da2775445b99e/classes.dex" />
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_064b98f8a7fd05ee6ed2ae41e575e34440b9972d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/libs/httpclient-4.5.2.jar"
+        jar="/Users/administrator/.android/build-cache/fc1d3a7538f1235392715ffca980d1d426512c90/output/jars/libs/internal_impl-22.1.1.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="733db77aa8d9b2d68015189df76ab06304406e50">
-        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpclient-4.5.2_3ba8d9d0d6fc99d76f8b4fa915657bf65f7c82d0/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/libs/httpclient-4.5.2.jar"
-        jumboMode="false"
-        optimize="true"
-        revision="25.0.0"
-        sha1="733db77aa8d9b2d68015189df76ab06304406e50">
-        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/pre-dexed/release/httpclient-4.5.2_3ba8d9d0d6fc99d76f8b4fa915657bf65f7c82d0.jar" />
+        sha1="9e070ad32b2700b0343e8e0cccc437733d91ba3a">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-22.1.1_3844c77d58a10ffd9b8664eea40a76078f665204/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/administrator/Water_Project/waterwatch/app/libs/mpandroidchartlibrary-2-1-5.jar"
         jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="dd4e32f467be91d812274ba3220f2f0a8ce26bac">
-        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8dea276309bb4ca3cd0755ea230cae00463cfd0c/classes.dex" />
-    </item>
-    <item
-        is-multidex="false"
-        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/libs/mpandroidchartlibrary-2-1-5.jar"
-        jumboMode="false"
         optimize="true"
         revision="25.0.0"
         sha1="a7650f11d4eb03995f4450562cc271d5f790c992">
-        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/pre-dexed/release/mpandroidchartlibrary-2-1-5_c671aede5fe8c311e769961623263ec49f700855.jar" />
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/2/mpandroidchartlibrary-2-1-5_2eb37eb4c9cb4904766b538d36fdd9b57120e97e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/Water_Project/waterwatch/app/libs/httpclient-4.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="733db77aa8d9b2d68015189df76ab06304406e50">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpclient-4.5.2_9b9db78e870f0f6c57b16fea7330584f2a27f4af/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/administrator/.android/build-cache/d62b64b3ce0ad95efa28e6ecbd20d9431b43c139/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f2f7ec211ce4d244ee97a57523eeb4526dc3cf8a">
+        <dex dex="/Users/administrator/Water_Project/waterwatch/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_750195ad3a66d3f50a879d32d7eb879eb2cd4949/classes.dex" />
     </item>
 
 </items>
