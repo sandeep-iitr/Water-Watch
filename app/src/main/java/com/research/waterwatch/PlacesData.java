@@ -1592,14 +1592,335 @@ public class PlacesData extends ActionBarActivity {
             WQE.setGravity(Gravity.CENTER);
             P_3a.addView(WQE);
 
-            Double DO=-1.0;
-            //computing the value of WQE
+
+            //adding action on clicking WQE
+            WQE.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    ScrollView S_4 = new ScrollView(cnt);
+
+                    LinearLayout layout = new LinearLayout(cnt);
+                    layout.setOrientation(LinearLayout.VERTICAL);
+                    // layout.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+                    LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+                    LinearLayout.LayoutParams lparams2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+                    lparams2.gravity = Gravity.CENTER;
+                    lparams.gravity=Gravity.FILL_VERTICAL;
+                    S_4.setLayoutParams(lparams2);
+                    //S_4.addView(layout);
+                    S_4.setScrollbarFadingEnabled(false);
+                    layout.setLayoutParams(lparams2);
+
+                    lparams.setMargins(30, 20, 30, 0);
+
+
+                    //explanation of WQE is displayed to user
+
+                    Button Close = new Button(cnt);
+                    Close.setId(130017);
+                    Close.setLayoutParams(lparams);
+                    Close.setText("Close");
+                    Close.setBackgroundColor(Color.parseColor("#FFDAB9"));
+                    layout.addView(Close);
+
+                    TextView WQE_exp = new TextView(cnt);//WQE explanation
+                    WQE_exp.setId(1050032);
+                    WQE_exp.setLayoutParams(lparams);
+                    WQE_exp.setText("Water Quality Index (WQI) depicts the overall water quality. The index calculated is called weighted arithmetic WQI. \n" +
+                            " The lower value of WQI depcits the better water quality. \n" +
+                            "WQI lower than 25 is considered excellent water quality.\n" +
+                            "WQI between 26 - 50 is considered good water quality.\n" +
+                            "WQI between 51 - 75 is considered poor water quality.\n" +
+                            "WQI between 76 - 100 is considered very poor water quality.\n" +
+                            "WQI greater then 100 is considered unsuitable for drinking purpose. \n" +
+                            "More details can be find on the APP project page.");
+                    WQE_exp.setTextSize(20);
+                    WQE_exp.setGravity(Gravity.CENTER);
+                    layout.addView(WQE_exp);
+
+
+                    //end explanation of WQE
+
+
+
+                    S_4.addView(layout);
+
+                    layout.setBackgroundResource(R.drawable.female1);
+                    final Dialog dialog = new Dialog(cnt);
+                    dialog.setContentView(S_4);
+                    dialog.setTitle("Water Quality Index");
+
+                    dialog.show();
+
+                    Close.setOnClickListener(new View.OnClickListener() {
+                        public void onClick(View v) {
+
+                            dialog.hide();
+                            show_data_layout();
+                        }
+                    });
+                }
+            });
+
+
+            //end adding action on clicking WQE
+
+
+            ArrayList <Double>S_wqi = new ArrayList<Double>();//(limits) standard value in this list
+            ArrayList <Double>V_wqi = new ArrayList<Double>();//ideal value in this list; ideal =0; except for Ph=7.0 and for DO = 14.6
+            ArrayList <Double>M_wqi = new ArrayList<Double>();//measured value of the parameter
+            ArrayList<String> par_wqi = new ArrayList<String>();//stores the corresponding parameter name
+            double K_contant=0,K_inv=0; //K is the contant
+            ArrayList <Double>Qi = new ArrayList<Double>();//quality rating score for each parameter
+            ArrayList <Double>Wi = new ArrayList<Double>();//weight for each parameter
+            double WQI=0,W_sum=0;
+
+            try {
+            //computing the value of WQE: Weighted arithmetic WQI calculation is done here.
+            //Do
             if(!s.DO.isEmpty()&&!s.DO.equals("-1.0"))
             {
                 //parameter is there
-                DO=Double.valueOf(s.DO);
-                Toast.makeText(cnt, "Do is:"+DO, Toast.LENGTH_SHORT).show();
+                M_wqi.add(Double.parseDouble(s.DO));//measured value
+                S_wqi.add(6.0);//minimum value of DO in Limits is 6.0
+                V_wqi.add(14.6);//ideal value of Do is 14.6
+                par_wqi.add("Do");//this is value for parameter Do
+                //Toast.makeText(cnt, "Do is:"+M.get(0), Toast.LENGTH_SHORT).show();
             }
+
+            //pH
+            if(!s.pH.isEmpty()&&!s.pH.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.pH));//measured value
+
+                if(Double.parseDouble(s.pH)<6.5)
+                S_wqi.add(6.5);//min or max depend on the measure value of Ph in Limits
+
+                else   //range is between 6.5 and 8.5, picking the standard near, elase 8.5
+                    S_wqi.add(8.5);//To do: These values should come from the Limits files, and be specific to purpose.
+
+                V_wqi.add(7.0);//ideal value of ph is 7.0
+                par_wqi.add("pH");//this is value for parameter Do
+
+            }
+
+            //Turbidity
+            if(!s.Turbidity.isEmpty()&&!s.Turbidity.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Turbidity));//measured value
+                S_wqi.add(10.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Turbidity");//this is value for parameter
+
+            }
+
+
+            //Conductivity
+            if(!s.Conductivity.isEmpty()&&!s.Conductivity.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Conductivity));//measured value
+                S_wqi.add(2250.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Conductivity");//this is value for parameter
+
+            }
+
+            //Sulphate
+            if(!s.Sulphate.isEmpty()&&!s.Sulphate.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Sulphate));//measured value
+                S_wqi.add(200.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Sulphate");//this is value for parameter
+
+            }
+
+            //Cadmium
+            if(!s.Cadmium.isEmpty()&&!s.Cadmium.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Cadmium));//measured value
+                S_wqi.add(0.01);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Cadmium");//this is value for parameter
+
+            }
+
+            //Chromium
+            if(!s.Chromium.isEmpty()&&!s.Chromium.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Chromium));//measured value
+                S_wqi.add(0.05);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Chromium");//this is value for parameter
+
+            }
+
+            //Nickel
+            if(!s.Nickel.isEmpty()&&!s.Nickel.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Nickel));//measured value
+                S_wqi.add(0.02);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Nickel");//this is value for parameter
+
+            }
+
+            //Iron
+            if(!s.Iron.isEmpty()&&!s.Iron.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Iron));//measured value
+                S_wqi.add(0.3);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Iron");//this is value for parameter
+
+            }
+
+            //Nitrate has not limits so skipping it
+
+            //BOD
+            if(!s.BOD.isEmpty()&&!s.BOD.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.BOD));//measured value
+                S_wqi.add(3.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("BOD");//this is value for parameter
+
+            }
+
+            //TC
+            if(!s.TC.isEmpty()&&!s.TC.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.TC));//measured value
+                S_wqi.add(500.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("TC");//this is value for parameter
+
+            }
+
+            //skipping the FC bacteria
+
+
+
+            //Hardness
+            if(!s.Hardness.isEmpty()&&!s.Hardness.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Hardness));//measured value
+                S_wqi.add(300.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Hardness");//this is value for parameter
+
+            }
+
+
+            //Alkalinity
+            if(!s.Alkalinity.isEmpty()&&!s.Alkalinity.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Alkalinity));//measured value
+                S_wqi.add(200.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Alkalinity");//this is value for parameter
+
+            }
+
+            //Chloride
+            if(!s.Chloride.isEmpty()&&!s.Chloride.equals("-1.0"))
+            {
+                //parameter is there
+                M_wqi.add(Double.parseDouble(s.Chloride));//measured value
+                S_wqi.add(250.0);//Limit on value
+                V_wqi.add(0.0);//ideal value
+                par_wqi.add("Chloride");//this is value for parameter
+
+            }
+
+               // System.out.println("Testing --Sandeep");
+
+
+
+                //computing K contant
+                for(int m=0;m<S_wqi.size();m++)
+                {
+                    K_inv = K_inv+(1.0/(S_wqi.get(m)));
+
+                }//end for
+
+                K_contant=(1.0/K_inv);
+
+              //  System.out.println("Testing --K is:"+K_contant);
+
+                //computing weight for each parameter
+                for(int m=0;m<S_wqi.size();m++)
+                {
+                    Wi.add(K_contant/S_wqi.get(m));
+
+                }//end for
+
+
+                /*
+                ArrayList <Double>S_wqi = new ArrayList<Double>();//(limits) standard value in this list
+            ArrayList <Double>V_wqi = new ArrayList<Double>();//ideal value in this list; ideal =0; except for Ph=7.0 and for DO = 14.6
+            ArrayList <Double>M_wqi = new ArrayList<Double>();//measured value of the parameter
+                 */
+                //computing Qi rating scale value for each parameter
+                for(int m=0;m<S_wqi.size();m++)
+                {
+                    Qi.add(100.0*(M_wqi.get(m)-V_wqi.get(m))/(S_wqi.get(m)-V_wqi.get(m)));
+
+                }//end for
+
+
+                //computing WQI
+                for(int m=0;m<S_wqi.size();m++)
+                {
+                    WQI =WQI+Qi.get(m)*Wi.get(m);
+                    W_sum=W_sum+Wi.get(m);
+                }//end for
+
+                WQI=WQI/W_sum;
+
+                //displaying in the GUI
+                String WQE_text="Water Quality Index";
+                final SpannableStringBuilder sb_WQE = new SpannableStringBuilder(WQE_text+"\n" +(int)WQI);
+                final ForegroundColorSpan fcs_WQE = new ForegroundColorSpan(Color.parseColor("#142860"));
+                sb_WQE.setSpan(fcs_WQE, WQE_text.length(), sb_WQE.length(), Spannable.SPAN_INCLUSIVE_INCLUSIVE);
+
+                WQE.setText(sb_WQE);//displaying the user
+
+                /*
+
+                for(int m=0;m<S_wqi.size();m++)
+            {
+                System.out.println(par_wqi.get(m));
+               // System.out.println(M_wqi.get(m));
+               // System.out.println(S_wqi.get(m));
+              //  System.out.println(V_wqi.get(m));
+                System.out.println(Wi.get(m));
+                System.out.println(Qi.get(m));
+            }
+            */
+
+               // System.out.println("Weight Quality Index:"+WQI);
+               // System.out.println("W_sum:"+W_sum);
+//
+            }//end try: Computing the WQI
+            catch (Exception e)
+            {
+                e.printStackTrace();
+            }
+
 
             /*
             End adding Water Quality index box
