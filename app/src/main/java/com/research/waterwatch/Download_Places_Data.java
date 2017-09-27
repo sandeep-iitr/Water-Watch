@@ -56,7 +56,7 @@ public class Download_Places_Data {
         Server_Get_API=Server_Get_API+"&Longitude="+GlobalData.current_Lng;
         Server_Get_API=Server_Get_API+"&Range="+GlobalData.current_range;
 
-        System.out.println("Places Data String is:"+Server_Get_API);
+        //System.out.println("Places Data String is:"+Server_Get_API);
 
         HttpGet httpgetreq = new HttpGet(Server_Get_API);
 
@@ -75,7 +75,7 @@ public class Download_Places_Data {
             String response2 = sb.toString();
             stream.close();
 
-              System.out.println("Data from Server is:"+response2);
+             // System.out.println("Data from Server is:"+response2);
 
             //places are in response string
             try {

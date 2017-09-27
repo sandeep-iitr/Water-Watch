@@ -52,7 +52,7 @@ public class Download_Places {
         DefaultHttpClient httpclient = new DefaultHttpClient();
         HttpGet httpgetreq = new HttpGet(GlobalData.Serveraddress+"query?Places-By-User="+GlobalData.username+"&Lic="+GlobalData.LicKey);
 
-        System.out.println("Places Query is:"+GlobalData.Serveraddress+"query?Places-By-User="+GlobalData.username+"&Lic="+GlobalData.LicKey);
+        //System.out.println("Places Query is:"+GlobalData.Serveraddress+"query?Places-By-User="+GlobalData.username+"&Lic="+GlobalData.LicKey);
 
         try {
 
@@ -70,7 +70,7 @@ public class Download_Places {
             stream.close();
             //
             //Toast.makeText(cnt, stream.toString(), Toast.LENGTH_SHORT).show();
-            Log.d("cloud server new2", "stream from server new2" + response);
+            //Log.d("cloud server new2", "stream from server new2" + response);
 
             //places are in response string
             try {

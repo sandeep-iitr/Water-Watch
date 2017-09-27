@@ -76,7 +76,7 @@ public class GlobalData {
 
     public static int refer=0;//1==fromMap to place data, 2==from listplaces to place data
 
-    public static String LicKey="C2eV6witgr";
+    public static String LicKey="AddYourKeyHere";// this key is fetched from the config.txt file under resource folder
     public static String Serveraddress="https://bluewater.mybluemix.net/";
     public static String username="ibmadmin";//get the data by a particular user
 }

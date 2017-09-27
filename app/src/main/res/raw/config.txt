@@ -1,0 +1,4 @@
+{
+"describe": "This is a config file which stores key used to query the BlueWater platform without key it will not work. Please read the IBM bluewater page for more details on tokens and keys",
+"key":"AddYourKeyHere"
+}

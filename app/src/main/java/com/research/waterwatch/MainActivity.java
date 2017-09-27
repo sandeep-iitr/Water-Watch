@@ -45,6 +45,11 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONObject;
+
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -78,6 +83,39 @@ public class MainActivity extends ActionBarActivity {
             }
         });
 
+
+        //Update the key from the config file.
+        try{
+            InputStream is = getResources().openRawResource(R.raw.config);
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+
+            byte buf[] = new byte[1024];
+            int len;
+            try {
+                while ((len = is.read(buf)) != -1) {
+                    outputStream.write(buf, 0, len);
+                }
+                outputStream.close();
+                is.close();
+            } catch (Exception e) {
+
+                e.printStackTrace();
+            }
+            String config= outputStream.toString();
+            //System.out.println("config is:"+config);
+            JSONObject cf=new JSONObject(config);
+            GlobalData.LicKey=cf.getString("key");
+
+            //Lic key is not valid
+            if(GlobalData.LicKey.equals("AddYourKeyHere"))
+            {
+                Toast.makeText(cnt, "Lic key is not correct, please add you licence key, in config.txt file in res/raw folder", Toast.LENGTH_LONG).show();
+            }
+
+        }//end try
+        catch(Exception e){
+            e.printStackTrace();
+        }
 
 
 
