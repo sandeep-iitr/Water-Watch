@@ -29,6 +29,15 @@
         <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/transforms/dex/debug/folders/1000/2/httpclient-4.5.2_3ba8d9d0d6fc99d76f8b4fa915657bf65f7c82d0/classes.dex" />
     </item>
     <item
+        is-multidex="false"
+        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/libs/mpandroidchartlibrary-2-1-5.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="a7650f11d4eb03995f4450562cc271d5f790c992">
+        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/pre-dexed/release/mpandroidchartlibrary-2-1-5_c671aede5fe8c311e769961623263ec49f700855.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
@@ -36,6 +45,15 @@
         revision="25.0.0"
         sha1="689a9d799250c4b12b3f97eafed6c38d2c2d2d36">
         <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_8dea276309bb4ca3cd0755ea230cae00463cfd0c/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/sandeep/BlueWater/WaterWatch_Git/app/libs/httpclient-4.5.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="733db77aa8d9b2d68015189df76ab06304406e50">
+        <dex dex="/home/sandeep/BlueWater/WaterWatch_Git/app/build/intermediates/pre-dexed/release/httpclient-4.5.2_3ba8d9d0d6fc99d76f8b4fa915657bf65f7c82d0.jar" />
     </item>
 
 </items>
