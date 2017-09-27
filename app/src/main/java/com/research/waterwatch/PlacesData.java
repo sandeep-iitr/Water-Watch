@@ -4203,6 +4203,67 @@ public class PlacesData extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+
+            ScrollView S_4 = new ScrollView(cnt);
+
+            LinearLayout layout = new LinearLayout(cnt);
+            layout.setOrientation(LinearLayout.VERTICAL);
+            // layout.setLayoutParams(new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.WRAP_CONTENT));
+            LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+            LinearLayout.LayoutParams lparams2 = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.FILL_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+
+            lparams2.gravity = Gravity.CENTER;
+            lparams.gravity=Gravity.FILL_VERTICAL;
+            S_4.setLayoutParams(lparams2);
+            //S_4.addView(layout);
+            S_4.setScrollbarFadingEnabled(false);
+            layout.setLayoutParams(lparams2);
+
+            lparams.setMargins(30, 20, 30, 0);
+
+
+            //explanation of WQE is displayed to user
+
+            Button Close = new Button(cnt);
+            Close.setId(190017);
+            Close.setLayoutParams(lparams);
+            Close.setText("Close");
+            Close.setBackgroundColor(Color.parseColor("#FFDAB9"));
+            layout.addView(Close);
+
+            TextView WQE_exp = new TextView(cnt);//WQE explanation
+            WQE_exp.setId(1090032);
+            WQE_exp.setLayoutParams(lparams);
+            WQE_exp.setText("Water Water uses BlueWater platform. BlueWater is developed for water data by IBM. " +
+                    "The code of Water Watch is available open source on GIT under GNU General Public License." +
+                    "Water Watch is developed by Sandeep (UCLA, PhD Student) and Biplav Srivastava (IBM Research). " +
+                    "Please share feedback on sandha.iitr@gmail.com");
+            WQE_exp.setTextSize(20);
+            WQE_exp.setGravity(Gravity.CENTER);
+            layout.addView(WQE_exp);
+
+
+            //end explanation of WQE
+
+
+
+            S_4.addView(layout);
+
+            layout.setBackgroundResource(R.drawable.female1);
+            final Dialog dialog = new Dialog(cnt);
+            dialog.setContentView(S_4);
+            dialog.setTitle("Credits");
+
+            dialog.show();
+
+            Close.setOnClickListener(new View.OnClickListener() {
+                public void onClick(View v) {
+
+                    dialog.hide();
+                    show_data_layout();
+                }
+            });
+
             return true;
         }
 
