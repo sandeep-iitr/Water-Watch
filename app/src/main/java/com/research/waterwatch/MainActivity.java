@@ -163,7 +163,7 @@ public class MainActivity extends ActionBarActivity {
             TextView WQE_exp = new TextView(cnt);//WQE explanation
             WQE_exp.setId(1090032);
             WQE_exp.setLayoutParams(lparams);
-            WQE_exp.setText("Water Water uses BlueWater platform developed for water data by IBM. " +
+            WQE_exp.setText("Water Water uses BlueWater platform. BlueWater is developed for water data by IBM. " +
                     "The code of Water Watch is available open source on GIT under GNU General Public License." +
                     "Water Watch is developed by Sandeep (UCLA, PhD Student) and Biplav Srivastava (IBM Research). " +
                     "Please share feedback on sandha.iitr@gmail.com");
