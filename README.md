@@ -5,6 +5,8 @@ Water Watch is a novel mobile application that makes water quality data usable a
 
 Water watch uses BlueWater API to fetch water quality data. Water watch is new version of GangaWatch.
 
+## [WaterWatch available on Google play store](https://play.google.com/store/apps/details?id=com.research.waterwatch)
+
 <p align="center">
   <img src="screenshots/1.png" width="250"/>
   <img src="screenshots/2.png" width="250"/>
